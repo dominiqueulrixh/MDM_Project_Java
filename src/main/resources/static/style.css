@@ -1,0 +1,44 @@
+body {
+    background-color: #FFFADC;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    font-family: Tahoma;
+}
+
+.middle {
+    background-color: #FFE5B2;
+    box-shadow: inset 0px 10px 30px -20px rgba(0, 0, 0, 0.3), inset 0 -10px 30px -20px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    padding-left: 20px;
+    overflow: hidden;
+    background-image: url('images/Emojis.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) 50%;
+}
+
+.bottom{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-custom {
+    background-color: #FFFADC;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand:hover {
+    color: white;
+}
+
+footer {
+    padding-left: 20px;
+    background-color: #FFE5B2;
+    box-shadow: inset 0px 10px 30px -20px rgba(0, 0, 0, 0.3), inset 0 -10px 30px -20px rgba(0, 0, 0, 0.3);
+    padding: 18px;
+    font-size: 12px;
+    text-align: center;
+}

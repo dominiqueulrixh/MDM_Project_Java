@@ -23,4 +23,5 @@ public class EmotionController {
         return inference.predict(image.getBytes()).toJson();
     }
 
+    
 }
