@@ -1,3 +1,7 @@
+#docker buildx build --platform linux/amd64 -t dominiqueulrixh/djl-serving-emotiondetection .
+#docker run -p 9000:8082 -d dominiqueulrixh/djl-serving-emotiondetection
+
+
 FROM openjdk:21-jdk-slim
 
 # Copy Files
