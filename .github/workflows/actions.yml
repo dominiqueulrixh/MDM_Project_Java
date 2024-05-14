@@ -1,25 +1,31 @@
-name: Upload To Azure Blob Storage
+name: Upload to Azure Blob Storage
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  build-and-upload:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Set up JDK 21
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'adopt'
-          java-version: '21'
+    - name: Upload .txt to Azure Blob Storage
+      uses: bacongobbler/azure-blob-storage-upload@main
+      with:
+        source_dir: 'models'
+        container_name: 'modelemotiondetection'
+        connection_string: ${{ secrets.ACCESSKEY }}
+        extra_args: '--pattern *.txt'
+        overwrite: 'true'
 
-      - name: Build with Maven
-        run: mvn package
-
-      - name: Upload model to Azure Blob Storage
-        env:
-          AZURE_STORAGE_CONNECTION_STRING: '${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}'
-        run: java -cp target/playground-0.0.1-SNAPSHOT.jar ch.zhaw.deeplearningjava.playground.UploadToAzureBlobStorage
-
+    - name: Upload .params to Azure Blob Storage
+      uses: bacongobbler/azure-blob-storage-upload@main
+      with:
+        source_dir: 'models'
+        container_name: 'modelemotiondetection'
+        connection_string: ${{ secrets.ACCESSKEY }}
+        extra_args: '--pattern *.params'
+        overwrite: 'true'
