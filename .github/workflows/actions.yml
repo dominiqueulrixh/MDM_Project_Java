@@ -13,6 +13,5 @@ jobs:
           source_dir: models
           container_name: ulricdo1emotiondetection
           connection_string: '${{secrets.AZURE_STORAGE_CONNECTION_STRING}}'
-          extra_args: '--pattern "*.params" --pattern "*.txt"'
-          # WARNING: this will overwrite existing blobs in your blob storage
+          extra_args: '--include "*.params" --include "*.txt"'
           overwrite: 'true'
