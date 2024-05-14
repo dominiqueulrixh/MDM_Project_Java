@@ -21,4 +21,5 @@ jobs:
       - name: Upload model to Azure Blob Storage
         env:
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-        run: java -cp target/your-artifact-name.jar ch.zhaw.deeplearningjava.playground.UploadToAzureBlobStorage
+        run: java -cp target/playground-0.0.1-SNAPSHOT.jar ch.zhaw.deeplearningjava.playground.UploadToAzureBlobStorage
+
