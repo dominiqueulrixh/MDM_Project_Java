@@ -1,12 +1,9 @@
-package ch.zhaw.deeplearningjava;
+package ch.zhaw.deeplearningjava.playground;
 
 import com.azure.storage.blob.*;
-import com.azure.storage.blob.models.BlobItem;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Objects;
+
 
 public class UploadToAzureBlobStorage {
 
