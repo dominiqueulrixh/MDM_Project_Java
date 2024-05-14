@@ -13,10 +13,12 @@
 	<artifactId>playground</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>playground</name>
+
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
+	
 	<dependencies>
 
 		<dependency>
@@ -60,10 +62,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-
-
-
 
 	</dependencies>
 
